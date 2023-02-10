@@ -2,31 +2,17 @@ import {View,Text} from "react-native";
 import {StatusBar} from "expo-status-bar";
 
 import {styles} from "../styles";
+import IconButton from "../components/IconButton";
 export default function HomeScreen({route, navigation}) {
-
     return (
         <View style={styles.container}>
             <View style={styles.element}>
-                <View style={styles.elementRow}>
-                    <Text style={[styles.text,styles.textTitle]}>
-                        {"Hello "}
-                    </Text>
-                    <Text style={[styles.text,styles.textTitle]}>
-                        {route.params.user}
-                    </Text>
-                </View>
+                <Text style={[styles.text,styles.textTitle]}>
+                    Hello {route.params.user}!
+                </Text>
             </View>
-            <View style={styles.element}>
-                <View style={styles.elementRow}>
-                    <Text style={[styles.text,styles.textTitle]}>
-                        This is a test
-                    </Text>
-                </View>
-            </View>
-
-
-
-            <Text style={styles.text}>Home Screen from a different file</Text>
+            <IconButton icon="qrcode" label="Scan QR" OnPress={() => navigation.navigate("QrCode")}/>
+            <IconButton icon="linechart" label="My progress" OnPress={() => alert("Pressed")}/>
             <StatusBar style="light" />
         </View>
     );

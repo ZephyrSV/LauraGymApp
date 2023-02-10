@@ -8,14 +8,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from "./screens/HomeScreen";
+import QrCodeScreen from "./screens/QrCodeScreen";
 
-function DetailsScreen() {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Details Screen</Text>
-        </View>
-    );
-}
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -32,8 +26,10 @@ export default function App() {
                     fontWeight: 'bold',
                 }
             }}>
-            <Stack.Screen name="Home" component={HomeScreen} initialParams={{user: "Laura"}}/>
-            <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen name="Home" component={HomeScreen} initialParams={{user: "Laura"}} options={{
+                headerShown: false,
+            }}/>
+            <Stack.Screen name="QrCode" component={QrCodeScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );

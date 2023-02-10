@@ -13,6 +13,7 @@ npx expo install react-native-view-shot expo-media-library
 npm install @react-navigation/native
 npm install @react-navigation/native-stack
 npx expo install react-native-screens react-native-safe-area-context
+npx expo install expo-barcode-scanner
 
 ```
 ## Optional Dependencies
