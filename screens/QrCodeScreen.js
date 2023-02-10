@@ -3,6 +3,8 @@ import { Text, View, StyleSheet} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import {styles} from "../styles";
 
+const machines = ['Treadmill', 'Elliptical', 'Stationary Bike', 'Rowing Machine', 'Smith Machine', 'Leg Press', 'Cable Machine', 'Lat Pulldown', 'Chest Press']
+
 export default function QrCodeScreen({route, navigation}) {
     const [hasPermission, setHasPermission] = useState(null);
 
@@ -16,6 +18,9 @@ export default function QrCodeScreen({route, navigation}) {
     }, []);
 
     const handleBarCodeScanned = ({ type, data }) => {
+        if (!machines.includes(data)) {
+            return;
+        }
         navigation.replace("Detail", {qrdata: data});
     };
 

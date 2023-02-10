@@ -21,3 +21,14 @@ Stuff that I had to install to make expo work.
 ```bash
 npm install @expo/ngrok@4.1.0 #tunnels
 ```
+## Attributions for the images
+I am using images from the following sources:
+https://www.flaticon.com/free-icons/treadmill
+https://www.flaticon.com/free-icons/gym
+https://www.flaticon.com/free-icons/rowing
+https://www.flaticon.com/free-icons/smith
+https://www.flaticon.com/free-icons/leg-press
+https://www.flaticon.com/free-icons/cable-row-machine
+https://www.flaticon.com/free-icons/lat-pulldown
+https://www.flaticon.com/free-icons/bodybuilding
+https://www.flaticon.com/free-icons/leg-press
