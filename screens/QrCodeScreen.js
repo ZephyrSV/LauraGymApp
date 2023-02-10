@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import {styles} from "../styles";
 
 export default function QrCodeScreen({route, navigation}) {
     const [hasPermission, setHasPermission] = useState(null);
-    const [scanned, setScanned] = useState(false);
 
     useEffect(() => {
         const getBarCodeScannerPermissions = async () => {
@@ -17,8 +16,7 @@ export default function QrCodeScreen({route, navigation}) {
     }, []);
 
     const handleBarCodeScanned = ({ type, data }) => {
-        setScanned(true);
-        alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        navigation.replace("Detail", {qrdata: data});
     };
 
     if (hasPermission === null) {
@@ -30,11 +28,10 @@ export default function QrCodeScreen({route, navigation}) {
 
     return (
         <View style={styles.container}>
-            <BarCodeScanner
-                onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+            {<BarCodeScanner
+                onBarCodeScanned={handleBarCodeScanned}
                 style={StyleSheet.absoluteFillObject}
-            />
-            {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
+            />}
         </View>
     );
 }

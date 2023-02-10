@@ -26,5 +26,12 @@ export const styles = StyleSheet.create({
     },
     button : {
         backgroundColor: '#424242',
+    },
+    modalContainer: {
+        height: '10',
+        width: '100%',
+        backgroundColor: '#25292e',
+        position: 'absolute',
+        bottom: 100,
     }
 })
