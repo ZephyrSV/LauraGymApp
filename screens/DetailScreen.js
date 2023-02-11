@@ -1,11 +1,14 @@
-import {styles} from "../styles";
-import {View, Text} from "react-native";
+import {styles} from "../components/styles";
+import {View, Text, Image} from "react-native";
+
 
 export default function DetailScreen({route, navigation}) {
-    const qrdata = route.params.qrdata;
+    const machine = route.params.machine;
+
     return (
         <View style={styles.container}>
-            <Text style={[styles.text, styles.textTitle]}>{qrdata}</Text>
+            <Text style={[styles.text, styles.textTitle]}>{machine.name}{"\n"}</Text>
+            <Image source={machine.icon} style={{width: 100, height: 100}}/>
         </View>
     );
 }

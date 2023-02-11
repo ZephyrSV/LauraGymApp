@@ -1,7 +1,7 @@
 import {View,Text} from "react-native";
 import {StatusBar} from "expo-status-bar";
 
-import {styles} from "../styles";
+import {styles} from "../components/styles";
 import IconButton from "../components/IconButton";
 export default function HomeScreen({route, navigation}) {
     return (
