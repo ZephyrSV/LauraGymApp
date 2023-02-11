@@ -14,6 +14,7 @@ npm install @react-navigation/native
 npm install @react-navigation/native-stack
 npx expo install react-native-screens react-native-safe-area-context
 npx expo install expo-barcode-scanner
+npm install react-native-stopwatch-timer --save
 
 ```
 ## Optional Dependencies
@@ -22,7 +23,8 @@ Stuff that I had to install to make expo work.
 npm install @expo/ngrok@4.1.0 #tunnels
 ```
 ## Attributions for the images
-I am using images from the following sources:
+I am using images from the following sources (some slightly modified):
+
 https://www.flaticon.com/free-icons/treadmill
 https://www.flaticon.com/free-icons/gym
 https://www.flaticon.com/free-icons/rowing

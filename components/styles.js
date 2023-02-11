@@ -23,15 +23,9 @@ export const styles = StyleSheet.create({
     textTitle: {
         fontSize: 32,
         fontWeight: 'bold',
+        textAlign: 'center',
     },
     button : {
         backgroundColor: '#424242',
     },
-    modalContainer: {
-        height: '10',
-        width: '100%',
-        backgroundColor: '#25292e',
-        position: 'absolute',
-        bottom: 100,
-    }
 })
