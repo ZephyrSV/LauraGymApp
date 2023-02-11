@@ -15,7 +15,8 @@ npm install @react-navigation/native-stack
 npx expo install react-native-screens react-native-safe-area-context
 npx expo install expo-barcode-scanner
 npm install react-native-stopwatch-timer --save
-
+npx expo install react-native-view-shot expo-media-library
+npx expo install expo-sharing
 ```
 ## Optional Dependencies
 Stuff that I had to install to make expo work.
