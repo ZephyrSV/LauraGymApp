@@ -26,7 +26,7 @@ export default function App() {
                     fontWeight: 'bold',
                 }
             }}>
-            <Stack.Screen name="Home" component={HomeScreen} initialParams={{user: "Laura"}} options={{
+            <Stack.Screen name="Home" component={HomeScreen} initialParams={{user: "[User Name]"}} options={{
                 headerShown: false,
             }}/>
             <Stack.Screen name="QrCode" component={QrCodeScreen} options={{

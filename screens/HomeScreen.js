@@ -12,7 +12,7 @@ export default function HomeScreen({route, navigation}) {
                 </Text>
             </View>
             <IconButton icon="qrcode" label="Scan QR" OnPress={() => navigation.navigate("QrCode")}/>
-            <IconButton icon="linechart" label="My progress" OnPress={() => alert("Pressed")}/>
+            <IconButton icon="linechart" label="My progress" OnPress={() => alert("This feature is currently being developed")}/>
             <StatusBar style="light" />
         </View>
     );

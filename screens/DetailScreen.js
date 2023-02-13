@@ -9,6 +9,8 @@ import * as Sharing from 'expo-sharing';
 export default function DetailScreen({route, navigation}) {
     const machine = route.params.machine;
     const imageRef = useRef(null);
+    const placeHolderActivityImage = require("../assets/placeHolderActivity.jpg");
+
     const ShareScreenShot = async () => {
         captureRef(imageRef, {
             format: "jpg",
@@ -31,6 +33,7 @@ export default function DetailScreen({route, navigation}) {
                     </View>
                 </View>
                 <WorkoutStopWatch/>
+                <Image source={placeHolderActivityImage} style={{ alignSelf:"center", resizeMode:"stretch", width: 300, height: 200}}/>
             </View>
             <IconButton label={"Share"} icon={"sharealt"} OnPress={ShareScreenShot}/>
         </View>
