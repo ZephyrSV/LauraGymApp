@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-export const styles = StyleSheet.create({
+export const s = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor : '#333333',
@@ -16,6 +16,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
     },
+    elementColumn: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
     text: {
         color: '#fff',
         fontSize: 24,
@@ -27,5 +32,19 @@ export const styles = StyleSheet.create({
     },
     button : {
         backgroundColor: '#424242',
+    },
+    footer: {
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        height: 75,
+        backgroundColor: '#2f2f2f',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    footer_text: {
+        color: '#fff',
+        fontSize: 20,
+        fontWeight: 'bold',
     },
 })

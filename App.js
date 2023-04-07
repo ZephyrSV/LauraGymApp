@@ -9,6 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from "./screens/HomeScreen";
 import QrCodeScreen from "./screens/QrCodeScreen";
 import DetailScreen from "./screens/DetailScreen";
+import LoginScreen from "./screens/LoginScreen";
+import Footer from "./components/Footer";
 
 
 const Stack = createNativeStackNavigator();
@@ -29,6 +31,9 @@ export default function App() {
             <Stack.Screen name="Home" component={HomeScreen} initialParams={{user: "[User Name]"}} options={{
                 headerShown: false,
             }}/>
+            <Stack.Screen name="Login" component={LoginScreen} options={{
+                headerShown: false,
+            }}/>
             <Stack.Screen name="QrCode" component={QrCodeScreen} options={{
                 unmountOnBlur: true,
             }}/>
@@ -36,6 +41,8 @@ export default function App() {
 
             }} />
         </Stack.Navigator>
+          <Footer/>
       </NavigationContainer>
+
   );
 }

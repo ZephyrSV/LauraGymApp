@@ -1,5 +1,5 @@
-import {styles} from "../components/styles";
-import {View, Text, Image, Platform} from "react-native";
+import {s} from "../components/styles";
+import {View, Text, Image} from "react-native";
 import WorkoutStopWatch from "../components/WorkoutStopWatch";
 import IconButton from "../components/IconButton";
 import { captureRef } from 'react-native-view-shot';
@@ -24,11 +24,11 @@ export default function DetailScreen({route, navigation}) {
     }
 
     return (
-        <View style={styles.container}>
-            <View ref={imageRef} style={{backgroundColor:styles.container.backgroundColor}} collapsable={false}>
-                <View style={styles.elementRow}>
-                    <Text style={[styles.text, styles.textTitle]}>{machine.display}</Text>
-                    <View style={[styles.element,{backgroundColor:"#555"}]}>
+        <View style={s.container}>
+            <View ref={imageRef} style={{backgroundColor:s.container.backgroundColor}} collapsable={false}>
+                <View style={s.elementRow}>
+                    <Text style={[s.text, s.textTitle]}>{machine.display}</Text>
+                    <View style={[s.element,{backgroundColor:"#555"}]}>
                         <Image source={machine.icon} style={{width: 100, height: 100}}/>
                     </View>
                 </View>

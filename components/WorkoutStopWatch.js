@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import { Stopwatch } from 'react-native-stopwatch-timer';
 
 import IconButton from "./IconButton";
-import {styles} from "./styles";
+import {s} from "./styles";
 export default function WorkoutStopWatch() {
     const [stopWatchState, setStopWatchState] = useState(2);
     const toggleStopWatch = () => {
@@ -14,7 +14,7 @@ export default function WorkoutStopWatch() {
     }
 
     return (
-        <View style={styles.elementRow}>
+        <View style={s.elementRow}>
             <Stopwatch
                 msecs={false}
                 start={stopWatchState===1}
