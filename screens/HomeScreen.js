@@ -3,9 +3,12 @@ import {StatusBar} from "expo-status-bar";
 
 import {s} from "../components/styles";
 import IconButton from "../components/IconButton";
+import Header from "../components/Header";
+
 export default function HomeScreen({route, navigation}) {
     return (
         <View style={s.container}>
+            <Header/>
             <View style={s.element}>
                 <Text style={[s.text,s.textTitle]}>
                     Hello {route.params.user}!

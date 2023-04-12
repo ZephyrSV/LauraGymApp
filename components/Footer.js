@@ -8,17 +8,17 @@ export default function Footer() {
         <View style={[s.footer, s.elementRow]}>
             <View/>
             <IconButton
-                icon={"silverware-fork-knife"}
-                label={"Food"}
-                OnPress={() => alert("This feature is currently being developed")}
-                family={"MaterialCommunityIcons"} vertical={true}
-                textStyle={[s.text, s.footer_text]}
-            />
-            <IconButton
                 icon={"running"}
                 label={"Workout"}
                 OnPress={() => alert("This feature is currently being developed")}
                 family={"FontAwesome5"} vertical={true}
+                textStyle={[s.text, s.footer_text]}
+            />
+            <IconButton
+                icon={"silverware-fork-knife"}
+                label={"Food"}
+                OnPress={() => alert("This feature is currently being developed")}
+                family={"MaterialCommunityIcons"} vertical={true}
                 textStyle={[s.text, s.footer_text]}
             />
             <IconButton

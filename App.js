@@ -11,12 +11,15 @@ import QrCodeScreen from "./screens/QrCodeScreen";
 import DetailScreen from "./screens/DetailScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
+      // <Header/>
       <NavigationContainer>
+
         <Stack.Navigator
             initialRouteName="Home"
             screenOptions={{
