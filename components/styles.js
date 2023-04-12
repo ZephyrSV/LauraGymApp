@@ -18,6 +18,9 @@ export const s = StyleSheet.create({
         borderRadius: 10,
         margin: 10,
     },
+    width_100: {
+        width: '100%',
+    },
     elementRow: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -37,11 +40,43 @@ export const s = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
+    textOutline: {
+        color: dark_cyan,
+        fontWeight: 'bold',
+        textShadowColor: black,
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 1,
+    },
+    textLeft: {
+        textAlign: 'left',
+    },
+    textRight: {
+        textAlign: 'right',
+    },
+    textCenter: {
+        textAlign: 'center',
+    },
+    textBold: {
+        fontWeight: 'bold',
+    },
+    textItalic: {
+        fontStyle: 'italic',
+    },
+    pb_10: {
+        paddingBottom: 10,
+    },
+    pr_10: {
+        paddingRight: 10,
+    },
+    pl_10: {
+        paddingLeft: 10,
+    },
     button : {
-        backgroundColor: '#1be08d',
+        backgroundColor: cyan,
         borderRadius: 10,
+        borderColor: dark_cyan,
         borderWidth: 2,
-        shadowColor: '#000',
+        shadowColor: black,
         shadowRadius: 2,
     },
     footer: {
@@ -49,9 +84,9 @@ export const s = StyleSheet.create({
         bottom: 0,
         width: '100%',
         height: 75,
-        backgroundColor: '#1be08d',
+        backgroundColor: dark_cyan,
         borderTopWidth: 5,
-        borderColor: '#000',
+        borderColor: eggshell,
         alignItems: 'center',
         justifyContent: 'space-between',
     },
@@ -76,7 +111,7 @@ export const s = StyleSheet.create({
         borderColor: eggshell,
     },
     header_text: {
-        color: almost_white,
+        color: white,
         fontWeight: 'bold',
         fontSize: 32,
         textAlign: 'center',
@@ -90,5 +125,22 @@ export const s = StyleSheet.create({
     },
     header_button: {
         color: dark_cyan
+    },
+    rounded_10: {
+        borderRadius: 10,
+        overflow: 'hidden',
+    },
+    image_container: {
+        width: '35%',
+        height: '20%',
+        borderRadius: 100,
+        borderWidth: 1,
+        borderColor: black,
+        overflow: 'hidden',
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',
     }
 })

@@ -3,7 +3,7 @@ import {s} from "./styles";
 import React from "react";
 import IconButton from "./IconButton";
 
-export default function Footer() {
+export default function Footer({route, navigation}) {
     return (
         <View style={[s.footer, s.elementRow]}>
             <View/>
@@ -31,7 +31,7 @@ export default function Footer() {
             <IconButton
                 icon={"hands-helping"}
                 label={"Trainer"}
-                OnPress={() => alert("This feature is currently being developed")}
+                OnPress={() => navigation.navigate("Trainer", {user: route.params.user})}
                 family={"FontAwesome5"} vertical={true}
                 textStyle={[s.text, s.footer_text]}
             />

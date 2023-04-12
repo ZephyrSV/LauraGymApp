@@ -12,6 +12,7 @@ import DetailScreen from "./screens/DetailScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import TrainerPage from "./screens/TrainerPage";
 
 
 const Stack = createNativeStackNavigator();
@@ -43,8 +44,10 @@ export default function App() {
             <Stack.Screen name="Detail" component={DetailScreen} options={{
 
             }} />
+            <Stack.Screen name={"Trainer"} component={TrainerPage} options={{
+                headerShown: false,
+            }}/>
         </Stack.Navigator>
-          <Footer/>
       </NavigationContainer>
 
   );
