@@ -2,10 +2,6 @@ import {s} from "./styles";
 import {AntDesign, MaterialCommunityIcons, FontAwesome5, FontAwesome} from "@expo/vector-icons";
 import {Pressable, Text, View} from "react-native";
 
-const defaultButtonStyle = {
-    color: "#fff",
-}
-
 /**
  * Returns a button with an icon (based on family) and a label, with a vertical or horizontal layout and an onPress function
  * @param icon {string} - The name of the icon
@@ -18,7 +14,7 @@ const defaultButtonStyle = {
  * @param iconStyle {object} - The extra style of the icon (default: nothing)
  * @returns {JSX.Element}
  */
-export default function IconButton ({ icon, family="AntDesign", label, OnPress, vertical=false, textStyle=s.text, buttonStyle=defaultButtonStyle, iconStyle={}}) {
+export default function IconButton ({ icon, family="AntDesign", label, OnPress, vertical=false, textStyle=s.text, buttonStyle=s.colorWhite, iconStyle={}}) {
     function getIcon(){
         switch (family) {
             case "AntDesign":

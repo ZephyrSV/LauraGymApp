@@ -110,6 +110,12 @@ export const s = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
     },
+    footer_selected: {
+        color: cyan,
+    },
+    colorWhite: {
+        color: white,
+    },
     header: {
         flexDirection: 'row',
         position: 'absolute',
