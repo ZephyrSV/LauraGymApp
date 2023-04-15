@@ -40,6 +40,9 @@ export const s = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
+    bg_cyan : {
+        backgroundColor: cyan,
+    },
     textOutline: {
         color: dark_cyan,
         fontWeight: 'bold',
@@ -70,6 +73,18 @@ export const s = StyleSheet.create({
     },
     pl_10: {
         paddingLeft: 10,
+    },
+    pt_10: {
+        paddingTop: 10,
+    },
+    p_10: {
+        padding : 10,
+    },
+    pl_20: {
+        paddingLeft: 20,
+    },
+    pl_40: {
+        paddingLeft: 40,
     },
     button : {
         backgroundColor: cyan,
@@ -116,7 +131,6 @@ export const s = StyleSheet.create({
         fontSize: 32,
         textAlign: 'center',
         flex : 1,
-        paddingLeft: 40,
     },
     header_button_outline: {
         backgroundColor: '#fff',
@@ -142,5 +156,17 @@ export const s = StyleSheet.create({
         width: '100%',
         height: '100%',
         resizeMode: 'contain',
+    },
+    input: {
+        backgroundColor: almost_white,
+        borderRadius: 10,
+        borderColor: dark_cyan,
+        borderWidth: 2,
+        shadowColor: black,
+        shadowRadius: 2,
+
+    },
+    pb_0: {
+        paddingBottom: 0,
     }
 })

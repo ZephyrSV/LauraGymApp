@@ -1,6 +1,5 @@
-import {Button, Text, View, Image} from "react-native";
+import {Text, View, Image} from "react-native";
 import {s} from "../components/styles";
-import Header from "../components/Header";
 import IconButton from "../components/IconButton";
 import {StatusBar} from "expo-status-bar";
 import Footer from "../components/Footer";
@@ -9,7 +8,6 @@ import React from "react";
 export default function TrainerPage({route, navigation}) {
     return (
         <View style={s.container}>
-            <Header/>
             <View style={[s.width_100, s.pb_10, s.pl_10]}>
                 <Text style={[s.text, s.textTitle, s.textLeft, s.textOutline]}>
                     Your trainer:

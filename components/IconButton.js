@@ -14,10 +14,11 @@ const defaultButtonStyle = {
  * @param OnPress {function} - The function to be called when the button is pressed
  * @param vertical {boolean} - Whether the button should be vertical or horizontal
  * @param textStyle {object} - The style of the text
- * @param buttonStyle {object} - The style of the button (default: white)
+ * @param buttonStyle {object} - The extra style of the button (default: white)
+ * @param iconStyle {object} - The extra style of the icon (default: nothing)
  * @returns {JSX.Element}
  */
-export default function IconButton ({ icon, family="AntDesign", label, OnPress, vertical=false, textStyle=s.text, buttonStyle=defaultButtonStyle }) {
+export default function IconButton ({ icon, family="AntDesign", label, OnPress, vertical=false, textStyle=s.text, buttonStyle=defaultButtonStyle, iconStyle={}}) {
     function getIcon(){
         switch (family) {
             case "AntDesign":
@@ -34,14 +35,14 @@ export default function IconButton ({ icon, family="AntDesign", label, OnPress, 
     }
     if (vertical)
         return (
-            <Pressable style={[s.elementColumn]} onPress={OnPress}>
+            <Pressable style={[s.elementColumn, iconStyle]} onPress={OnPress}>
                 {getIcon()}
                 {label !== undefined ? <Text style={textStyle}>{label} </Text>: null}
             </Pressable>
         )
     else
     return (
-        <Pressable style={[s.element, s.button]} onPress={OnPress}>
+        <Pressable style={[s.element, s.button, iconStyle]} onPress={OnPress}>
             <View style={s.elementRow}>
                 {label !== undefined ? <Text style={textStyle}>{label} </Text>: null}
                 {getIcon()}

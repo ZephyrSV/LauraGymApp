@@ -3,52 +3,45 @@
  *  keep in mind this is my first real go at making an app...
  */
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from "./screens/HomeScreen";
+import WorkoutScreen from "./screens/WorkOutScreen";
 import QrCodeScreen from "./screens/QrCodeScreen";
 import DetailScreen from "./screens/DetailScreen";
 import LoginScreen from "./screens/LoginScreen";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TrainerPage from "./screens/TrainerPage";
 
 
 const Stack = createNativeStackNavigator();
 export default function App() {
-  return (
-      // <Header/>
-      <NavigationContainer>
+    return (
+        <NavigationContainer>
+            <Stack.Navigator
+                initialRouteName="Workout"
+                screenOptions={{
+                    header: Header,
+                    headerStyle: {
+                        headerSize: 70,
+                    },
+                    animationTypeForReplace: 'pop',
+                }}>
+                <Stack.Screen name="Workout" component={WorkoutScreen} initialParams={{user: "[User Name]"}} options={{
+                }}/>
+                <Stack.Screen name="Login" component={LoginScreen} options={{
+                    headerShown: false,
+                }}/>
+                <Stack.Screen name="QrCode" component={QrCodeScreen} options={{
+                    unmountOnBlur: true,
+                }}/>
+                <Stack.Screen name="Detail" component={DetailScreen} options={{
 
-        <Stack.Navigator
-            initialRouteName="Home"
-            screenOptions={{
-                headerStyle: {
-                    backgroundColor: '#343434',
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                    fontWeight: 'bold',
-                }
-            }}>
-            <Stack.Screen name="Home" component={HomeScreen} initialParams={{user: "[User Name]"}} options={{
-                headerShown: false,
-            }}/>
-            <Stack.Screen name="Login" component={LoginScreen} options={{
-                headerShown: false,
-            }}/>
-            <Stack.Screen name="QrCode" component={QrCodeScreen} options={{
-                unmountOnBlur: true,
-            }}/>
-            <Stack.Screen name="Detail" component={DetailScreen} options={{
+                }} />
+                <Stack.Screen name={"Trainer"} component={TrainerPage} options={{
 
-            }} />
-            <Stack.Screen name={"Trainer"} component={TrainerPage} options={{
-                headerShown: false,
-            }}/>
-        </Stack.Navigator>
-      </NavigationContainer>
-
-  );
+                }}/>
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
