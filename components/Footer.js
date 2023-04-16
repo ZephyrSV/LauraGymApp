@@ -2,25 +2,30 @@ import {View} from "react-native";
 import {s} from "./styles";
 import React from "react";
 import IconButton from "./IconButton";
-import { useRoute } from '@react-navigation/native';
+import {StackActions, useNavigation, useRoute} from '@react-navigation/native';
+import {customAnimation} from "./customAnimations";
 
-export default function Footer({route, navigation}) {
+export default function Footer() {
 
-    const route1 = useRoute();
-    console.log(route1.name);
+    const route = useRoute();
+    console.log(route.name);
 
     function FooterButton({icon, label, OnPress, family}){
-        const route1 = useRoute();
-        const textStyle = [s.text, s.footer_text, (label === route1.name ? [s.footer_selected] : null)];
-        const buttonStyle = [s.colorWhite, (label === route1.name ? [s.footer_selected] : null)];
+        const route = useRoute();
+        const navigation = useNavigation();
+        const textStyle = [s.text, s.footer_text, (label === route.name ? [s.footer_selected] : null)];
+        const buttonStyle = [s.colorWhite, (label === route.name ? [s.footer_selected] : null)];
         return (
             <IconButton
                 icon={icon}
                 label={label}
                 OnPress={() => {
-                    navigation.popToTop();
-                    navigation.replace(label, {user: route.params.user}
-                    )}}
+                    if (label === route.name)
+                        return;
+                    if (navigation.canGoBack())
+                        navigation.popToTop();
+                    navigation.dispatch(StackActions.replace(label, {animation: customAnimation }));
+                }}
                 family={family} vertical={true}
                 textStyle={textStyle}
                 buttonStyle={buttonStyle}

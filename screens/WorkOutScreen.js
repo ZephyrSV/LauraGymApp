@@ -11,13 +11,13 @@ export default function WorkOutScreen({route, navigation}) {
         {
             key: "1",
             image: require("../assets/images/slideshowPictures/legpresswoman.jpg"),
-            label: "Upper body",
+            label: "Leg training",
             OnPress: () => alert("This feature is currently being developed")
         },
         {
             key: "2",
             image: require("../assets/images/slideshowPictures/plankmanwoman.jpg"),
-            label: "Lower body",
+            label: "Abdomen training",
             OnPress: () => alert("This feature is currently being developed")
         },
         {

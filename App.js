@@ -12,6 +12,7 @@ import DetailScreen from "./screens/DetailScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Header from "./components/Header";
 import TrainerPage from "./screens/TrainerPage";
+import FoodScreen from "./screens/FoodScreen";
 
 
 const Stack = createNativeStackNavigator();
@@ -25,7 +26,7 @@ export default function App() {
                     headerStyle: {
                         headerSize: 70,
                     },
-                    animationTypeForReplace: 'pop',
+                    animationTypeForReplace: 'push'
                 }}>
                 <Stack.Screen name="Workout" component={WorkoutScreen} initialParams={{user: "[User Name]"}} options={{
                 }}/>
@@ -39,6 +40,9 @@ export default function App() {
 
                 }} />
                 <Stack.Screen name={"Trainer"} component={TrainerPage} options={{
+
+                }}/>
+                <Stack.Screen name={"Food"} component={FoodScreen} options={{
 
                 }}/>
             </Stack.Navigator>

@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
-const white = '#ffffff';
-const cyan = '#1be08d';
-const dark_cyan = "#609c87"
-const almost_white = "#e0f7f1"
-const eggshell = "#d9eddf"
-const black = "#000000"
+export const white = '#ffffff';
+export const cyan = '#1be08d';
+export const dark_cyan = "#609c87"
+export const almost_white = "#e0f7f1"
+export const eggshell = "#d9eddf"
+export const black = "#000000"
 
 export const s = StyleSheet.create({
     container: {
@@ -45,11 +45,14 @@ export const s = StyleSheet.create({
     },
     textTitle: {
         fontSize: 32,
-        fontWeight: 'bold',
+        fontWeight: '900',
         textAlign: 'center',
     },
     bg_cyan : {
         backgroundColor: cyan,
+    },
+    white : {
+        color: white,
     },
     textOutline: {
         color: dark_cyan,
@@ -231,5 +234,29 @@ export const s = StyleSheet.create({
         textShadowColor: black,
         textShadowOffset: { width: -1, height: 1 },
         textShadowRadius: 1,
+    },
+    blackLine: {
+        borderBottomWidth: 2,
+        borderColor:'black'
+    },
+    justifySpaceBetween:{
+        justifyContent: 'space-between',
+    },
+    margin10: {
+        margin: 10,
+    },
+    border: {
+        borderWidth: 2,
+    },
+    borderRB: {
+        borderBottomWidth: 2,
+        borderRightWidth: 2,
+    },
+    borderLB: {
+        borderBottomWidth: 2,
+        borderLeftWidth: 2,
+    },
+    borderBlack: {
+        borderColor: black,
     },
 })
