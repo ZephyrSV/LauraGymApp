@@ -5,6 +5,7 @@ import IconButton from "../components/IconButton";
 import { captureRef } from 'react-native-view-shot';
 import {useRef} from "react";
 import * as Sharing from 'expo-sharing';
+import Footer from "../components/Footer";
 
 export default function DetailScreen({route, navigation}) {
     const machine = route.params.machine;
@@ -36,6 +37,7 @@ export default function DetailScreen({route, navigation}) {
                 <Image source={placeHolderActivityImage} style={{ alignSelf:"center", resizeMode:"stretch", width: 300, height: 200}}/>
             </View>
             <IconButton label={"Share"} icon={"sharealt"} OnPress={ShareScreenShot}/>
+            <Footer route={route} navigation={navigation}/>
         </View>
     );
 }

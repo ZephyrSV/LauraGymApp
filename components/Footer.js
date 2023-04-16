@@ -17,7 +17,10 @@ export default function Footer({route, navigation}) {
             <IconButton
                 icon={icon}
                 label={label}
-                OnPress={OnPress}
+                OnPress={() => {
+                    navigation.popToTop();
+                    navigation.replace(label, {user: route.params.user}
+                    )}}
                 family={family} vertical={true}
                 textStyle={textStyle}
                 buttonStyle={buttonStyle}
@@ -30,30 +33,22 @@ export default function Footer({route, navigation}) {
             <FooterButton
                 icon={"running"}
                 label={"Workout"}
-                OnPress={() => alert("This feature is currently being developed")}
                 family={"FontAwesome5"} vertical={true}
-                textStyle={[s.text, s.footer_text]}
             />
-            <IconButton
+            <FooterButton
                 icon={"silverware-fork-knife"}
                 label={"Food"}
-                OnPress={() => alert("This feature is currently being developed")}
                 family={"MaterialCommunityIcons"} vertical={true}
-                textStyle={[s.text, s.footer_text]}
             />
-            <IconButton
+            <FooterButton
                 icon={"calendar-check-o"}
                 label={"Planner"}
-                OnPress={() => alert("This feature is currently being developed")}
                 family={"FontAwesome"} vertical={true}
-                textStyle={[s.text, s.footer_text]}
             />
-            <IconButton
+            <FooterButton
                 icon={"hands-helping"}
                 label={"Trainer"}
-                OnPress={() => navigation.navigate("Trainer", {user: route.params.user})}
                 family={"FontAwesome5"} vertical={true}
-                textStyle={[s.text, s.footer_text]}
             />
             <View/>
         </View>

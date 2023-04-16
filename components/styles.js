@@ -86,6 +86,24 @@ export const s = StyleSheet.create({
     pl_40: {
         paddingLeft: 40,
     },
+    pb_40: {
+        paddingBottom: 40,
+    },
+    pt_40: {
+        paddingTop: 40,
+    },
+    pt_80: {
+        paddingTop: 80,
+    },
+    pt_90: {
+        paddingTop: 90,
+    },
+    pb_80: {
+        paddingBottom: 80,
+    },
+    pb_90: {
+        paddingBottom: 90,
+    },
     button : {
         backgroundColor: cyan,
         borderRadius: 10,
@@ -132,8 +150,8 @@ export const s = StyleSheet.create({
         borderColor: eggshell,
     },
     header_text: {
+        fontWeight: "900",
         color: white,
-        fontWeight: 'bold',
         fontSize: 32,
         textAlign: 'center',
         flex : 1,
@@ -174,5 +192,31 @@ export const s = StyleSheet.create({
     },
     pb_0: {
         paddingBottom: 0,
-    }
+    },
+    scrollview: {
+        maxHeight: 220,
+    },
+    scrollview_element: {
+        width: 250,
+        backgroundColor: cyan,
+        marginRight: 10,
+        marginLeft: 10,
+        borderRadius: 10,
+        borderColor: dark_cyan,
+        borderWidth: 2,
+        overflow: 'hidden',
+    },
+    scrollview_element_image: {
+        resizeMode: 'contain',
+        overflow: 'hidden',
+        width: 250,
+        height: 187,
+        borderBottomWidth: 2,
+        borderColor: dark_cyan,
+    },
+    scrollview_element_text: {
+
+        textAlign: "center",
+        fontSize: 20,
+    },
 })
