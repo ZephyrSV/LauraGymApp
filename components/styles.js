@@ -35,6 +35,14 @@ export const s = StyleSheet.create({
         color: '#343434',
         fontSize: 24,
     },
+    iconButton_text: {
+        color: 'white',
+        fontWeight: '900',
+        fontSize: 24,
+        textShadowColor: black,
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 1,
+    },
     textTitle: {
         fontSize: 32,
         fontWeight: 'bold',
@@ -126,7 +134,7 @@ export const s = StyleSheet.create({
     footer_text: {
         color: '#fff',
         fontSize: 20,
-        fontWeight: 'bold',
+        fontWeight: '900',
     },
     footer_selected: {
         color: cyan,
@@ -215,8 +223,13 @@ export const s = StyleSheet.create({
         borderColor: dark_cyan,
     },
     scrollview_element_text: {
-
+        fontWeight: "900",
+        fontStyle: "italic",
+        color: white,
         textAlign: "center",
         fontSize: 20,
+        textShadowColor: black,
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 1,
     },
 })

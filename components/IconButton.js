@@ -14,7 +14,7 @@ import {Pressable, Text, View} from "react-native";
  * @param iconStyle {object} - The extra style of the icon (default: nothing)
  * @returns {JSX.Element}
  */
-export default function IconButton ({ icon, family="AntDesign", label, OnPress, vertical=false, textStyle=s.text, buttonStyle=s.colorWhite, iconStyle={}}) {
+export default function IconButton ({ icon, family="AntDesign", label, OnPress, vertical=false, textStyle=s.iconButton_text, buttonStyle=s.colorWhite, iconStyle={}}) {
     function getIcon(){
         switch (family) {
             case "AntDesign":

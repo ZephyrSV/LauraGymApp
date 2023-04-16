@@ -28,9 +28,21 @@ export default function WorkOutScreen({route, navigation}) {
         },
         ];
 
+    const bottom_buttons_iconStyle = {
+        width: '90%',
+        padding: 5,
+        borderRadius: 10,
+        margin: 0,
+    }
+    const bottom_buttons_buttonStyle = {
+        paddingRight: 10,
+        color : "white"
+    }
+
+
     return (
         <View style={[s.container, s.pt_80, s.pb_80]}>
-            <ScrollView horizontal style={s.scrollview}>
+            <ScrollView horizontal style={[s.scrollview]}>
                 {scrollviewcontent.map((item, index) => (
                     <View style={s.scrollview_element}>
                         <Image source={item.image} style={s.scrollview_element_image}/>
@@ -38,8 +50,36 @@ export default function WorkOutScreen({route, navigation}) {
                     </View>
                 ))}
             </ScrollView>
-            <IconButton icon="qrcode" label="Scan QR" OnPress={() => navigation.navigate("QrCode")}/>
-            <IconButton icon="linechart" label="My progress" OnPress={() => alert("This feature is currently being developed")}/>
+            <View style={s.pb_10}/>
+            <IconButton
+                icon="qrcode"
+                label="Scan QR"
+                OnPress={() => navigation.navigate("QrCode")}
+            />
+            <View style={s.pb_10}/>
+            <IconButton
+                icon="arrowright"
+                label="Stretching exercices"
+                OnPress={() => alert("this has not beeen")}
+                iconStyle={bottom_buttons_iconStyle}
+                buttonStyle={bottom_buttons_buttonStyle}
+            />
+            <View style={s.pb_10}/>
+            <IconButton
+                icon="arrowright"
+                label="High intensity"
+                OnPress={() => alert("this has not beeen")}
+                iconStyle={bottom_buttons_iconStyle}
+                buttonStyle={bottom_buttons_buttonStyle}
+            />
+            <View style={s.pb_10}/>
+            <IconButton
+                icon="arrowright"
+                label="Low intensity"
+                OnPress={() => alert("this has not beeen")}
+                iconStyle={bottom_buttons_iconStyle}
+                buttonStyle={bottom_buttons_buttonStyle}
+            />
             <StatusBar style="light" />
             <Footer navigation={navigation} route={route}/>
         </View>
