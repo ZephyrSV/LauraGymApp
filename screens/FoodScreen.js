@@ -62,7 +62,7 @@ export default function FoodScreen({navigation, route}) {
                     </Pressable>
                 </View>
             </View>
-            <CircleDial fillPercentage={90} size={200} label="Calories">
+            <CircleDial fillPercentage={caloriesConsumed/caloriesGoal*100} size={200} label="Calories">
                 <Text style={[s.textOutline, {fontSize: 50}]} >{caloriesConsumed}</Text>
                 <Text style={{ textAlign: 'center', fontSize: 20, paddingBottom: 10, fontStyle: 'italic' }}>calories consumed</Text>
                 <Text style={{ textAlign: 'center', fontSize: 20}}>Goal:</Text>

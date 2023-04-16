@@ -32,6 +32,7 @@ export default function LoginScreen({navigation, route}){
                 label="Start your journey!"
                 OnPress={() => navigation.goBack()}
                 buttonStyle={{color: 'black'}}
+                textStyle={[{fontWeight: '600',fontSize: 24,color: 'black'}]}
                 iconStyle={{backgroundColor: 'white'}}
             />
         </View>

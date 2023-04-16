@@ -13,6 +13,7 @@ import LoginScreen from "./screens/LoginScreen";
 import Header from "./components/Header";
 import TrainerPage from "./screens/TrainerPage";
 import FoodScreen from "./screens/FoodScreen";
+import PlannerScreen from "./screens/PlannerScreen";
 
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +44,9 @@ export default function App() {
 
                 }}/>
                 <Stack.Screen name={"Food"} component={FoodScreen} options={{
+
+                }}/>
+                <Stack.Screen name={"Planner"} component={PlannerScreen} options={{
 
                 }}/>
             </Stack.Navigator>

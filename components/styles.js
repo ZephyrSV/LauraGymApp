@@ -21,6 +21,9 @@ export const s = StyleSheet.create({
     width_100: {
         width: '100%',
     },
+    width_90: {
+        width: '90%',
+    },
     elementRow: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -50,6 +53,15 @@ export const s = StyleSheet.create({
     },
     bg_cyan : {
         backgroundColor: cyan,
+    },
+    bg_dark_cyan : {
+        backgroundColor: dark_cyan,
+    },
+    bg_almost_white : {
+        backgroundColor: almost_white,
+    },
+    bg_eggshell : {
+        backgroundColor: eggshell,
     },
     white : {
         color: white,
@@ -259,4 +271,7 @@ export const s = StyleSheet.create({
     borderBlack: {
         borderColor: black,
     },
+    borderRadius_10: {
+        borderRadius: 10,
+    }
 })
